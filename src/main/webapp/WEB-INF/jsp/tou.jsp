@@ -54,10 +54,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Privacy Statement</h2>
+          <h2>Terms of use</h2>
           <ol>
             <li><a href="/home">Home</a></li>
-            <li>Privacy Statement</li>
+            <li>Terms of use</li>
           </ol>
         </div>
 

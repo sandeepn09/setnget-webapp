@@ -26,9 +26,14 @@ public class HomeController {
 		return "jsp/home";
 	}
 	
-	@RequestMapping("/confirm")
+	@RequestMapping("/privacy-statement")
 	public String confirm(HttpServletResponse response) {
-		return "jsp/confirmation";
+		return "jsp/privacy-statement";
+	}
+	
+	@RequestMapping("/tou")
+	public String termsOfUse(HttpServletResponse response) {
+		return "jsp/tou";
 	}
 
 	@RequestMapping("email1")
