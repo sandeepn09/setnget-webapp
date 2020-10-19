@@ -7,7 +7,6 @@
   "use strict";
 
   $('form.php-email-form').submit(function(e) {
-    e.preventDefault();
     
     var f = $(this).find('.form-group'),
       ferror = false,
@@ -96,40 +95,22 @@
     });
     if (ferror) return false;
 
-    var this_form = $(this);
-    var action = $(this).attr('action');
-
-    if( ! action ) {
-      this_form.find('.loading').slideUp();
-      this_form.find('.error-message').slideDown().html('The form action property is not set!');
-      return false;
-    }
-    
-    this_form.find('.sent-message').slideUp();
-    this_form.find('.error-message').slideUp();
-    this_form.find('.loading').slideDown();
-
-    if ( $(this).data('recaptcha-site-key') ) {
-      var recaptcha_site_key = $(this).data('recaptcha-site-key');
-      grecaptcha.ready(function() {
-        grecaptcha.execute(recaptcha_site_key, {action: 'php_email_form_submit'}).then(function(token) {
-          php_email_form_submit(this_form,action,this_form.serialize() + '&recaptcha-response=' + token);
-        });
-      });
-    } else {
-      php_email_form_submit(this_form,action,this_form.serialize());
-    }
-    
     return true;
   });
 
-  function php_email_form_submit(this_form, action, data) {
+	function php_email_form_submit(this_form, action, data) {
+		alert('data'+data);
+		this_form.submit();
+	}
+
+  function php_email_form_submit1(this_form, action, data) {
     $.ajax({
       type: "POST",
       url: action,
       data: data,
       timeout: 40000
     }).done( function(msg){
+    	alert('msg'+msg);
       if (msg == 'OK') {
         this_form.find('.loading').slideUp();
         this_form.find('.sent-message').slideDown();

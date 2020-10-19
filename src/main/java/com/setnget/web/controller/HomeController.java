@@ -2,6 +2,7 @@ package com.setnget.web.controller;
 
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -23,6 +24,11 @@ public class HomeController {
 	@RequestMapping("/home")
 	public String getHome() {
 		return "jsp/home";
+	}
+	
+	@RequestMapping("/confirm")
+	public String confirm(HttpServletResponse response) {
+		return "jsp/confirmation";
 	}
 
 	@RequestMapping("email1")
@@ -49,7 +55,7 @@ public class HomeController {
 		mailClient.sendMessageToSupport(request.getParameter("message"), customerEmail, name,
 				request.getParameter("subject"));
 		mailClient.sendThankyouMessage(customerEmail, name);
-		return "jsp/home";
+		return "jsp/confirmation";
 	}
 
 }
