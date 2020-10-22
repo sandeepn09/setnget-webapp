@@ -35,6 +35,11 @@ public class HomeController {
 	public String termsOfUse(HttpServletResponse response) {
 		return "jsp/tou";
 	}
+	
+	@RequestMapping("/subscribe")
+	public String subscribe(HttpServletResponse response) {
+		return "jsp/subscripton_conf";
+	}
 
 	@RequestMapping("email1")
 	public String sendMail() {
@@ -60,7 +65,7 @@ public class HomeController {
 		mailClient.sendMessageToSupport(request.getParameter("message"), customerEmail, name,
 				request.getParameter("subject"));
 		mailClient.sendThankyouMessage(customerEmail, name);
-		return "jsp/confirmation";
+		return "jsp/thankyou_msg";
 	}
 
 }

@@ -433,7 +433,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>Subscribe to our Newsletter to get the latest updates on how our implementations drive clients</p>
-            <form action="" method="post">
+            <form action="/subscribe" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
