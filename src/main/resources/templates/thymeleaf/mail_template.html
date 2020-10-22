@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+	
 		<style>
 		body {
-		
-			font-family: Tahoma, Helvetica, sans-serif;
+			font-family: 'Poppins', sans-serif;
 			background-color:#f4f0f7;
 		}
 		
@@ -18,8 +19,7 @@
 		  background-color:#fbfafc;
 		  height: 300px;
 		  position: relative;
-		  font-family: Arial, Helvetica, sans-serif;
-		  
+		  font-family: 'Poppins', sans-serif;
 		}
 		
 		.outer {
@@ -36,29 +36,33 @@
 			height: 80px;
 		}
 		.bottom {
-			
+			background-color: purple;
 			position: absolute;
 			bottom: 0;
 			text-align: center;
 			width: 100%;
 			font-size: 12px;
 			height: 30px;
-			
+			color: #fff;
+			padding-top: 10px;
 			
 		}
 		</style>
 	</head>
 	<body style="text-align: center; border-radius: 5px;">
 		<div class="main">
-			<div class="imgdiv">
-			</div>
 			<div style="margin-top:30px; font-size: 15px; padding: 40px;">
 				<p>
 				Dear <span th:text="${name}"></span>,
 				
 				</p>
 				
-				We have received your message. An associate will get back you soon!
+				We have received your message. An associate will get back to you soon!
+				<p>
+				Thank you,
+				<br>
+				The setnget team
+				</p>
 			</div>
 			
 			<div class="bottom">
