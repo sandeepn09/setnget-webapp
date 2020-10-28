@@ -332,7 +332,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>contact@setnget.com</p>
+              <p>support@setnget.com</p>
             </div>
           </div>
 
@@ -404,7 +404,7 @@
               Nashua, NH 03062<br>
               United States <br><br>
               <strong>Phone:</strong> +1 603-204-1491<br>
-              <strong>Email:</strong> info@setnget.com<br>
+              <strong>Email:</strong> support@setnget.com<br>
             </p>
           </div>
 
