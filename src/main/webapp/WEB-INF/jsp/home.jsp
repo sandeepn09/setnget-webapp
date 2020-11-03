@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="google-site-verification" content="1Y5bEJz9uLwINVjqtlpXUzl21XUyATndbOtE0YRYr4Q" />
 
   <title>SetNGet - Home</title>
   <meta content="" name="descriptison">
